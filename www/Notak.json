@@ -1,0 +1,352 @@
+{
+  
+  "DoFa": {
+  "1": {
+    "Zenbakia": 1,
+    "Itxi": "G5",
+    "Ireki": "D5"
+  },
+  "2": {
+    "Zenbakia": 2,
+    "Itxi": "A5",
+    "Ireki": "E5"
+  },
+  "3": {
+    "Zenbakia": 3,
+    "Itxi": "E5",
+    "Ireki": "B4"
+  },
+  "4": {
+    "Zenbakia": 4,
+    "Itxi": "F5",
+    "Ireki": "D5"
+  },
+  "5": {
+    "Zenbakia": 5,
+    "Itxi": "C4",
+    "Ireki": "A4"
+  },
+  "6": {
+    "Zenbakia": 6,
+    "Itxi": "C4",
+    "Ireki": "Bb4"
+  },
+  "7": {
+    "Zenbakia": 7,
+    "Itxi": "G4",
+    "Ireki": "F4"
+  },
+  "8": {
+    "Zenbakia": 8,
+    "Itxi": "A4",
+    "Ireki": "G4"
+  },
+  "9": {
+    "Zenbakia": 9,
+    "Itxi": "E4",
+    "Ireki": "D4"
+  },
+  "10": {
+    "Zenbakia": 10,
+    "Itxi": "F4",
+    "Ireki": "E4"
+  },
+  "11": {
+    "Zenbakia": 11,
+    "Itxi": "C4",
+    "Ireki": "B3"
+  },
+  "12": {
+    "Zenbakia": 12,
+    "Itxi": "C4",
+    "Ireki": "D4"
+  },
+  "13": {
+    "Zenbakia": 13,
+    "Itxi": "G3",
+    "Ireki": "A3"
+  },
+  "14": {
+    "Zenbakia": 14,
+    "Itxi": "A3",
+    "Ireki": "Bb3"
+  },
+  "15": {
+    "Zenbakia": 15,
+    "Itxi": "E3",
+    "Ireki": "F3"
+  },
+  "16": {
+    "Zenbakia": 16,
+    "Itxi": "F3",
+    "Ireki": "G3"
+  },
+  "17": {
+    "Zenbakia": 17,
+    "Itxi": "C3",
+    "Ireki": "D3"
+  },
+  "18": {
+    "Zenbakia": 18,
+    "Itxi": "C3",
+    "Ireki": "E3"
+  },
+  "19": {
+    "Zenbakia": 19,
+    "Itxi": "G2",
+    "Ireki": "B2"
+  },
+  "20": {
+    "Zenbakia": 20,
+    "Itxi": "Eb4",
+    "Ireki": "Cs4"
+  },
+  "21": {
+    "Zenbakia": 21,
+    "Itxi": "Fs3",
+    "Ireki": "Gs3"
+  },
+  "22": {
+    "Zenbakia": 22,
+    "Itxi": "Fs4",
+    "Ireki": "Gs4"
+  },
+  "23": {
+    "Zenbakia": 23,
+    "Itxi": "Eb3",
+    "Ireki": "Cs3"
+  }
+},
+"BbEb": {
+  "1": {
+    "Zenbakia": 1,
+    "Ireki": "C5",
+    "Itxi": "F5"
+  },
+  "2": {
+    "Zenbakia": 2,
+    "Ireki": "D5",
+    "Itxi": "G5"
+  },
+  "3": {
+    "Zenbakia": 3,
+    "Ireki": "A4",
+    "Itxi": "D5"
+  },
+  "4": {
+    "Zenbakia": 4,
+    "Ireki": "C5",
+    "Itxi": "Ds5"
+  },
+  "5": {
+    "Zenbakia": 5,
+    "Ireki": "G4",
+    "Itxi": "Bb4"
+  },
+  "6": {
+    "Zenbakia": 6,
+    "Ireki": "Gs4",
+    "Itxi": "Bb4"
+  },
+  "7": {
+    "Zenbakia": 7,
+    "Ireki": "Eb4",
+    "Itxi": "F4"
+  },
+  "8": {
+    "Zenbakia": 8,
+    "Ireki": "F4",
+    "Itxi": "G4"
+  },
+  "9": {
+    "Zenbakia": 9,
+    "Ireki": "C4",
+    "Itxi": "D4"
+  },
+  "10": {
+    "Zenbakia": 10,
+    "Ireki": "D4",
+    "Itxi": "Ds4"
+  },
+  "11": {
+    "Zenbakia": 11,
+    "Ireki": "A3",
+    "Itxi": "Bb3"
+  },
+  "12": {
+    "Zenbakia": 12,
+    "Ireki": "C4",
+    "Itxi": "Bb3"
+  },
+  "13": {
+    "Zenbakia": 13,
+    "Ireki": "G3",
+    "Itxi": "F3"
+  },
+  "14": {
+    "Zenbakia": 14,
+    "Ireki": "Gs3",
+    "Itxi": "G3"
+  },
+  "15": {
+    "Zenbakia": 15,
+    "Ireki": "Ds3",
+    "Itxi": "D3"
+  },
+  "16": {
+    "Zenbakia": 16,
+    "Ireki": "F3",
+    "Itxi": "Ds3"
+  },
+  "17": {
+    "Zenbakia": 17,
+    "Ireki": "C3",
+    "Itxi": "Bb2"
+  },
+  "18": {
+    "Zenbakia": 18,
+    "Ireki": "D3",
+    "Itxi": "Bb2"
+  },
+  "19": {
+    "Zenbakia": 19,
+    "Ireki": "A3",
+    "Itxi": "F2"
+  },
+  "20": {
+    "Zenbakia": 20,
+    "Ireki": "B4",
+    "Itxi": "Cs4"
+  },
+  "21": {
+    "Zenbakia": 21,
+    "Ireki": "Fs3",
+    "Itxi": "E3"
+  },
+  "22": {
+    "Zenbakia": 22,
+    "Ireki": "Fs4",
+    "Itxi": "E4"
+  },
+  "23": {
+    "Zenbakia": 23,
+    "Ireki": "B2",
+    "Itxi": "Cs3"
+  }
+},
+"keyboard": {
+  "1": {
+  "Zenbakia": 1,
+  "KeyCode": 221
+},
+"2": {
+  "Zenbakia": 2,
+  "KeyCode": 187
+},
+"3": {
+  "Zenbakia": 3,
+  "KeyCode": 219
+},
+"4": {
+  "Zenbakia": 4,
+  "KeyCode": 189
+},
+"5": {
+  "Zenbakia": 5,
+  "KeyCode": 80
+},
+"6": {
+  "Zenbakia": 6,
+  "KeyCode": 48
+},
+"7": {
+  "Zenbakia": 7,
+  "KeyCode": 79
+},
+"8": {
+  "Zenbakia": 8,
+  "KeyCode": 57
+},
+"9": {
+  "Zenbakia": 9,
+  "KeyCode": 73
+},
+"10": {
+  "Zenbakia": 10,
+  "KeyCode": 56
+},
+"11": {
+  "Zenbakia": 11,
+  "KeyCode": 85
+},
+"12": {
+  "Zenbakia": 12,
+  "KeyCode": 55
+},
+"13": {
+  "Zenbakia": 13,
+  "KeyCode": 89
+},
+"14": {
+  "Zenbakia": 14,
+  "KeyCode": 54
+},
+"15": {
+  "Zenbakia": 15,
+  "KeyCode": 84
+},
+"16": {
+  "Zenbakia": 16,
+  "KeyCode": 53
+},
+"17": {
+  "Zenbakia": 17,
+  "KeyCode": 82
+},
+"18": {
+  "Zenbakia": 18,
+  "KeyCode": 52
+},
+"19": {
+  "Zenbakia": 19,
+  "KeyCode": 69
+},
+"20": {
+  "Zenbakia": 20,
+  "KeyCode": 51
+},
+"21": {
+  "Zenbakia": 21,
+  "KeyCode": 87
+},
+"22": {
+  "Zenbakia": 22,
+  "KeyCode": 50
+},
+"23": {
+  "Zenbakia": 23,
+  "KeyCode": 81
+},
+"dofa": {
+  "Zenbakia": "dofa",
+  "KeyCode": 190
+},
+"sibmib": {
+  "Zenbakia": "bbeb",
+  "KeyCode": 191
+},
+"itxi": {
+  "Zenbakia": "itxi",
+  "KeyCode": 90
+},
+"ireki": {
+  "Zenbakia": "ireki",
+  "KeyCode": 88
+},
+"biak": {
+  "Zenbakia": "biak",
+  "KeyCode": 67
+}
+  }
+}
+  

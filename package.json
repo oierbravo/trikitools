@@ -1,0 +1,24 @@
+{
+  "name": "org.mongoband.trikitools",
+  "displayName": "TrikiTools",
+  "version": "1.0.0",
+  "description": "Tools for trikitixa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oier Bravo Urtasun",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "cordova-plugin-whitelist": "^1.3.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
