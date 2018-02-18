@@ -7,39 +7,67 @@
     var keyboardMode = "triki";
     $(document).keydown(function(event){
       var keycode = event.keyCode;
-      if(event.shiftKey){
-        norabidea = "ireki";
-      } else {
-        norabidea = "itxi";
-      }
-      //console.log(keycode);
-      var nota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
-      if(!nota){
-        nota = _.find(keyboardMap.options,{'KeyCode':keycode});
-      }
-      if(nota){
-        if(typeof nota.Zenbakia == 'string') {
-
-          $('.btn-' + nota.Zenbakia).trigger('click');
+      if(keyboardMode === "triki") {
+        if(event.shiftKey){
+          norabidea = "ireki";
         } else {
-          $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mousedown').addClass("circle-trigger");
+          norabidea = "itxi";
         }
-
-      } else {
-
-      }
-      }).keyup(function(event){
-        var keycode = event.keyCode;
+        //console.log(keycode);
         var nota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+        if(!nota){
+          nota = _.find(keyboardMap.options,{'KeyCode':keycode});
+        }
         if(nota){
           if(typeof nota.Zenbakia == 'string') {
 
+            $('.btn-' + nota.Zenbakia).trigger('click');
           } else {
-            $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mouseup').removeClass("circle-trigger");;
+            $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mousedown').addClass("circle-trigger");
           }
+
         } else {
+
         }
-        });
+      } else if(keyboardMode === "piano") {
+          var pianoNota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+          if(pianoNota){
+            var nota;
+            if(event.shiftKey){
+              nota = pianoNota.NotaShifted;
+            } else {
+              nota = pianoNota.Nota;
+            }
+            $('.piano-nota[data-nota=' + nota + ']').trigger('mousedown').addClass("piano-active");;
+          }
+      }
+      }).keyup(function(event){
+        var keycode = event.keyCode;
+        if(keyboardMode === "triki") {
+          var nota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+          if(nota){
+            if(typeof nota.Zenbakia == 'string') {
+
+            } else {
+              $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mouseup').removeClass("circle-trigger");;
+            }
+          } else {
+
+          }
+        } else if(keyboardMode === "piano") {
+          var pianoNota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+
+          var nota;
+          if(pianoNota){
+            if(event.shiftKey){
+              nota = pianoNota.NotaShifted;
+            } else {
+              nota = pianoNota.Nota;
+            }
+            $('.piano-nota[data-nota=' + nota + ']').trigger('mouseup').removeClass("piano-active");
+          }
+        }
+      });
     var sounds = {
       triki: {},
       piano: {}
@@ -123,9 +151,10 @@
           }
         });
 
-        sounds.piano[pianoNota].seek(0);
-        sounds.piano[pianoNota].play();
+
       }
+      sounds.piano[pianoNota].seek(0);
+      sounds.piano[pianoNota].play();
     }
     var pianoMouseUpEv = function(e){
       var nota = $(this);
@@ -155,6 +184,15 @@
          $(".btn").removeClass('selected');
          $(this).addClass('selected').addClass('color-' + action);
          trikiPlayer.setAfinazioa(afinazioa);
+       }
+     });
+     $('.btn-keyboard-mode').click(function(){
+       if(!$(this).hasClass('selected')){
+         $(".btn.active").removeClass("color-" + $(".btn.selected-mode").data('action'));
+         var action = $(this).data('action');
+         keyboardMode = action;
+         $(".btn").removeClass('selected-mode');
+         $(this).addClass('selected-mode').addClass('color-' + action);
        }
      });
      $('.piano-nota').each(function(index,el){

@@ -1,4 +1,126 @@
 {
+  "piano": {
+    "F2": {
+      "Nota": "F2",
+      "NotaShifted": "F4",
+      "KeyCode": 90
+    },
+    "Fs2": {
+      "Nota": "Fs2",
+      "NotaShifted": "Fs4",
+      "KeyCode": 83
+    },
+    "G2": {
+      "Nota": "G2",
+      "NotaShifted": "G4",
+      "KeyCode": 88
+    },
+    "Gs2": {
+      "Nota": "Gs2",
+      "NotaShifted": "Gs4",
+      "KeyCode": 68
+    },
+    "A2": {
+      "Nota": "A2",
+      "NotaShifted": "A4",
+      "KeyCode": 67
+    },
+    "Bb2": {
+      "Nota": "Bb2",
+      "NotaShifted": "Bb4",
+      "KeyCode": 70
+    },
+    "B2": {
+      "Nota": "B2",
+      "NotaShifted": "B4",
+      "KeyCode": 86
+    },
+    "C3": {
+      "Nota": "C3",
+      "NotaShifted": "C5",
+      "KeyCode": 66
+    },
+    "Cs3": {
+      "Nota": "Cs3",
+      "NotaShifted": "Cs5",
+      "KeyCode": 72
+    },
+    "D3": {
+      "Nota": "D3",
+      "NotaShifted": "D5",
+      "KeyCode": 78
+    },
+    "Eb3": {
+      "Nota": "Eb3",
+      "NotaShifted": "Eb5",
+      "KeyCode": 74
+    },
+    "E3": {
+      "Nota": "E3",
+      "NotaShifted": "E5",
+      "KeyCode": 77
+    },
+    "F3": {
+      "Nota": "F3",
+      "NotaShifted": "F5",
+      "KeyCode": 81
+    },
+    "Fs3": {
+      "Nota": "Fs3",
+      "NotaShifted": "Fs5",
+      "KeyCode": 50
+    },
+    "G3": {
+      "Nota": "G3",
+      "NotaShifted": "G5",
+      "KeyCode": 87
+    },
+    "Gs3": {
+      "Nota": "Gs3",
+      "NotaShifted": "Gs5",
+      "KeyCode": 51
+    },
+    "A3": {
+      "Nota": "A3",
+      "NotaShifted": "A5",
+      "KeyCode": 69
+    },
+    "Bb3": {
+      "Nota": "Bb3",
+      "NotaShifted": "Bb5",
+      "KeyCode": 52
+    },
+    "B3": {
+      "Nota": "B3",
+      "NotaShifted": "B5",
+      "KeyCode": 82
+    },
+    "C4": {
+      "Nota": "C4",
+      "NotaShifted": "",
+      "KeyCode": 84
+    },
+    "Cs4": {
+      "Nota": "Cs4",
+      "NotaShifted": "",
+      "KeyCode": 54
+    },
+    "D4": {
+      "Nota": "D4",
+      "NotaShifted": "",
+      "KeyCode": 89
+    },
+    "Eb4": {
+      "Nota": "Eb4",
+      "NotaShifted": "",
+      "KeyCode": 55
+    },
+    "E4": {
+      "Nota": "E4",
+      "NotaShifted": "",
+      "KeyCode": 85
+    }
+  },
   "triki":{
     "1": {
       "Zenbakia": 1,
