@@ -160,7 +160,7 @@
      $('.piano-nota').each(function(index,el){
        var nota = $(el).data('nota');
 
-       var src  = './samples/piano/' + nota.replace('#','s') + '.wav';
+       var src  = 'samples/piano/' + nota.replace('#','s') + '.wav';
        var sound = new Howl({
          src: [src]
        });

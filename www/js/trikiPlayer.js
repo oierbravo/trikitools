@@ -21,10 +21,10 @@
           //console.log(afinazioa);
           _.forEach(self.notakMap[afinazioa],function(element,index){
             var soundIreki = new Howl({
-              src: ['./samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Ireki.ogg']
+              src: ['samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Ireki.ogg']
             });
             var soundItxi = new Howl({
-              src: ['./samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Itxi.ogg']
+              src: ['samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Itxi.ogg']
             });
             //console.log(element);
             self.sounds.triki[afinazioa][element.Zenbakia] = {
