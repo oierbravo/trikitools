@@ -1,0 +1,114 @@
+{
+  "1": {
+    "Zenbakia": 1,
+    "KeyCode": 221
+  },
+  "2": {
+    "Zenbakia": 2,
+    "KeyCode": 187
+  },
+  "3": {
+    "Zenbakia": 3,
+    "KeyCode": 219
+  },
+  "4": {
+    "Zenbakia": 4,
+    "KeyCode": 189
+  },
+  "5": {
+    "Zenbakia": 5,
+    "KeyCode": 80
+  },
+  "6": {
+    "Zenbakia": 6,
+    "KeyCode": 48
+  },
+  "7": {
+    "Zenbakia": 7,
+    "KeyCode": 79
+  },
+  "8": {
+    "Zenbakia": 8,
+    "KeyCode": 57
+  },
+  "9": {
+    "Zenbakia": 9,
+    "KeyCode": 73
+  },
+  "10": {
+    "Zenbakia": 10,
+    "KeyCode": 56
+  },
+  "11": {
+    "Zenbakia": 11,
+    "KeyCode": 85
+  },
+  "12": {
+    "Zenbakia": 12,
+    "KeyCode": 55
+  },
+  "13": {
+    "Zenbakia": 13,
+    "KeyCode": 89
+  },
+  "14": {
+    "Zenbakia": 14,
+    "KeyCode": 54
+  },
+  "15": {
+    "Zenbakia": 15,
+    "KeyCode": 84
+  },
+  "16": {
+    "Zenbakia": 16,
+    "KeyCode": 53
+  },
+  "17": {
+    "Zenbakia": 17,
+    "KeyCode": 82
+  },
+  "18": {
+    "Zenbakia": 18,
+    "KeyCode": 52
+  },
+  "19": {
+    "Zenbakia": 19,
+    "KeyCode": 69
+  },
+  "20": {
+    "Zenbakia": 20,
+    "KeyCode": 51
+  },
+  "21": {
+    "Zenbakia": 21,
+    "KeyCode": 87
+  },
+  "22": {
+    "Zenbakia": 22,
+    "KeyCode": 50
+  },
+  "23": {
+    "Zenbakia": 23,
+    "KeyCode": 81
+  },
+  "dofa": {
+    "Zenbakia": "dofa",
+    "KeyCode": 190
+  },
+  "sibmib": {
+    "Zenbakia": "bbeb",
+    "KeyCode": 191
+  },
+  "itxi": {
+    "Zenbakia": "itxi",
+    "KeyCode": 90
+  },
+  "ireki": {
+    "Zenbakia": "ireki",
+    "KeyCode": 88
+  },
+  "biak": {
+    "Zenbakia": "biak",
+    "KeyCode": 67
+  }
+}
