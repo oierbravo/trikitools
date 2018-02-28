@@ -73,6 +73,9 @@ body {
 .circle:active {
   background-color: #777;
 }
+.circle-trigger {
+  background-color: #68b0a4 !important;
+}
 .notak-ezker {
   padding-top: 10px;
 }
@@ -162,6 +165,9 @@ ul {
       font-size: 16pt;
 }
 @media (max-width: 767px) {
+  .hidden-mobile {
+    display:none
+  }
   .piano {
     height: 150px;
   }
@@ -196,6 +202,9 @@ ul {
   }
 }
 @media (max-width: 480px) {
+  .hidden-mobile {
+    display:none
+  }
   .key {
     width: 1,5%;
   }
@@ -243,6 +252,9 @@ ul {
   border-width: 0 0 10px 0;
   border-color: #4e7df7 !important;
   border-style: solid;
+}
+.color-active {
+  background-color: #73b8ff !important;
 }
 .off,
 .color-off {
@@ -295,6 +307,7 @@ ul {
 
   color: #fff;
 }
+.selected-mode,
 .selected {
   background-color: #ff6e6e !important;
 }

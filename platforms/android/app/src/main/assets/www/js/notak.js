@@ -3,33 +3,71 @@
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
   $(document).ready(function(){
+    var norabidea = "ireki";
+    var keyboardMode = "triki";
     $(document).keydown(function(event){
       var keycode = event.keyCode;
-      //console.log(keycode);
-      var nota = _.find(keyboardMap,{'KeyCode':keycode});
-      if(nota){
-        if(typeof nota.Zenbakia == 'string') {
-
-          $('.btn-' + nota.Zenbakia).trigger('click');
+      if(keyboardMode === "triki") {
+        if(event.shiftKey){
+          norabidea = "ireki";
         } else {
-          $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mousedown').addClass("circle-trigger");
+          norabidea = "itxi";
         }
-
-      } else {
-
-      }
-      }).keyup(function(event){
-        var keycode = event.keyCode;
-        var nota = _.find(notakMap['keyboard'],{'KeyCode':keycode});
+        //console.log(keycode);
+        var nota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+        if(!nota){
+          nota = _.find(keyboardMap.options,{'KeyCode':keycode});
+        }
         if(nota){
           if(typeof nota.Zenbakia == 'string') {
 
+            $('.btn-' + nota.Zenbakia).trigger('click');
           } else {
-            $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mouseup').removeClass("circle-trigger");;
+            $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mousedown').addClass("circle-trigger");
           }
+
         } else {
+
         }
-        });
+      } else if(keyboardMode === "piano") {
+          var pianoNota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+          if(pianoNota){
+            var nota;
+            if(event.shiftKey){
+              nota = pianoNota.NotaShifted;
+            } else {
+              nota = pianoNota.Nota;
+            }
+            $('.piano-nota[data-nota=' + nota + ']').trigger('mousedown').addClass("piano-active");;
+          }
+      }
+      }).keyup(function(event){
+        var keycode = event.keyCode;
+        if(keyboardMode === "triki") {
+          var nota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+          if(nota){
+            if(typeof nota.Zenbakia == 'string') {
+
+            } else {
+              $('.triki-nota[data-zenbakia=' + nota.Zenbakia + ']').trigger('mouseup').removeClass("circle-trigger");;
+            }
+          } else {
+
+          }
+        } else if(keyboardMode === "piano") {
+          var pianoNota = _.find(keyboardMap[keyboardMode],{'KeyCode':keycode});
+
+          var nota;
+          if(pianoNota){
+            if(event.shiftKey){
+              nota = pianoNota.NotaShifted;
+            } else {
+              nota = pianoNota.Nota;
+            }
+            $('.piano-nota[data-nota=' + nota + ']').trigger('mouseup').removeClass("piano-active");
+          }
+        }
+      });
     var sounds = {
       triki: {},
       piano: {}
@@ -37,7 +75,7 @@
 
     var afinazioa = "DoFa";
 
-    var norabidea = "ireki";
+
     var notakMap;
     var notaMapLoaded = false;
 
@@ -101,12 +139,20 @@
       var nota = $(this);
       var pianoZenbakia = nota.data('key');
       var pianoNota = nota.data('nota');
-
-      if($(".triki-nota[data-itxi='" + pianoNota + "']").length == 0 && $(".triki-nota[data-ireki='" + pianoNota + "']").length == 0){
+      var trikiNotak = trikiPlayer.getZenbakia(pianoNota);
+      if(trikiNotak.length === 0){
         nota.addClass(classes.pianoNone);
+      } else {
+        _.forEach(trikiNotak,function(element,index){
+          if(element.Itxi === pianoNota){
+            $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").addClass(classes.colorItxi);
+          } else if(element.Ireki === pianoNota){
+            $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").addClass(classes.colorIreki);
+          }
+        });
+
+
       }
-      $(".triki-nota[data-itxi='" + pianoNota + "']").addClass(classes.colorItxi);
-      $(".triki-nota[data-ireki='" + pianoNota + "']").addClass(classes.colorIreki);
       sounds.piano[pianoNota].seek(0);
       sounds.piano[pianoNota].play();
     }
@@ -114,12 +160,20 @@
       var nota = $(this);
       var pianoZenbakia = nota.data('key');
       var pianoNota = nota.data('nota');
-      if($(".triki-nota[data-itxi='" + pianoNota + "']").length == 0 && $(".triki-nota[data-ireki='" + pianoNota + "']").length == 0){
+      var trikiNotak = trikiPlayer.getZenbakia(pianoNota);
+      if(trikiNotak.length === 0){
         nota.removeClass(classes.pianoNone);
+      } else {
+        _.forEach(trikiNotak,function(element,index){
+          if(element.Itxi === pianoNota){
+            $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").removeClass(classes.colorItxi);
+          } else if(element.Ireki === pianoNota){
+            $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").removeClass(classes.colorIreki);
+          }
+        });
+
+        sounds.piano[pianoNota].stop();
       }
-      $(".triki-nota[data-itxi='" + pianoNota + "']").removeClass(classes.colorItxi);
-      $(".triki-nota[data-ireki='" + pianoNota + "']").removeClass(classes.colorIreki);
-      sounds.piano[pianoNota].stop();
     }
 
      $('.btn-afinazioa').click(function(){
@@ -132,10 +186,19 @@
          trikiPlayer.setAfinazioa(afinazioa);
        }
      });
+     $('.btn-keyboard-mode').click(function(){
+       if(!$(this).hasClass('selected')){
+         $(".btn.active").removeClass("color-" + $(".btn.selected-mode").data('action'));
+         var action = $(this).data('action');
+         keyboardMode = action;
+         $(".btn").removeClass('selected-mode');
+         $(this).addClass('selected-mode').addClass('color-' + action);
+       }
+     });
      $('.piano-nota').each(function(index,el){
        var nota = $(el).data('nota');
 
-       var src  = './samples/piano/' + nota.replace('#','s') + '.wav';
+       var src  = 'samples/piano/' + nota.replace('#','s') + '.wav';
        var sound = new Howl({
          src: [src]
        });
@@ -171,7 +234,7 @@ bindEvents();
     .fail(function() {
       console.log( "KeyboardMap JSON error" );
     });
-*/
+
   });
 
 })()

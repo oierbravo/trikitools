@@ -1,7 +1,7 @@
 {
   "name": "org.mongoband.trikitools",
   "displayName": "TrikiTools",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Tools for trikitixa",
   "main": "index.js",
   "scripts": {

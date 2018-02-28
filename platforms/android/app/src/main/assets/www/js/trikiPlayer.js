@@ -21,10 +21,10 @@
           //console.log(afinazioa);
           _.forEach(self.notakMap[afinazioa],function(element,index){
             var soundIreki = new Howl({
-              src: ['./samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Ireki.ogg']
+              src: ['samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Ireki.ogg']
             });
             var soundItxi = new Howl({
-              src: ['./samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Itxi.ogg']
+              src: ['samples/triki/'+ afinazioa + '/' + element.Zenbakia + ' - Itxi.ogg']
             });
             //console.log(element);
             self.sounds.triki[afinazioa][element.Zenbakia] = {
@@ -54,6 +54,13 @@
     };
     TrikiPlayer.prototype.getNota = function getNota(zenbakia,norabidea) {
       return this.notakMap[this.currentAfinazioa][zenbakia][this.capitalizeFirstLetter(norabidea)];
+    };
+    TrikiPlayer.prototype.getZenbakia = function getNota(nota) {
+      var notakItxi = _.filter(this.notakMap[this.currentAfinazioa],{'Itxi':nota});
+      var notakIreki = _.filter(this.notakMap[this.currentAfinazioa],{'Ireki':nota});
+      var notak = [].concat(notakItxi,notakIreki);
+      return notak;
+
     };
     TrikiPlayer.prototype.play = function play(trikiZenbakia,norabidea) {
       this.sounds.triki[this.currentAfinazioa][trikiZenbakia][norabidea].seek(0);
