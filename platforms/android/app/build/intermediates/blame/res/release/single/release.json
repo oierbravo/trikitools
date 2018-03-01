@@ -56,14 +56,6 @@
         "source": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
     },
     {
-        "merged": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_icon.png.flat",
-        "source": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
-    },
-    {
-        "merged": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_icon.png.flat",
-        "source": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
-    },
-    {
         "merged": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-ldpi_icon.png.flat",
         "source": "C:\\Users\\oier\\nodejs\\TrikiTools\\platforms\\android\\app\\src\\main\\res\\mipmap-ldpi\\icon.png"
     },
