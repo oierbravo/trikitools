@@ -23,12 +23,12 @@
   },
   "5": {
     "Zenbakia": 5,
-    "Itxi": "C4",
+    "Itxi": "C5",
     "Ireki": "A4"
   },
   "6": {
     "Zenbakia": 6,
-    "Itxi": "C4",
+    "Itxi": "C5",
     "Ireki": "Bb4"
   },
   "7": {
@@ -136,7 +136,7 @@
   "4": {
     "Zenbakia": 4,
     "Ireki": "C5",
-    "Itxi": "Ds5"
+    "Itxi": "Eb5"
   },
   "5": {
     "Zenbakia": 5,
@@ -166,7 +166,7 @@
   "10": {
     "Zenbakia": 10,
     "Ireki": "D4",
-    "Itxi": "Ds4"
+    "Itxi": "Eb4"
   },
   "11": {
     "Zenbakia": 11,
@@ -190,13 +190,13 @@
   },
   "15": {
     "Zenbakia": 15,
-    "Ireki": "Ds3",
+    "Ireki": "Eb3",
     "Itxi": "D3"
   },
   "16": {
     "Zenbakia": 16,
     "Ireki": "F3",
-    "Itxi": "Ds3"
+    "Itxi": "Eb3"
   },
   "17": {
     "Zenbakia": 17,
