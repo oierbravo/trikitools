@@ -10,7 +10,7 @@
       self.capitalizeFirstLetter = function(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
-
+  
 
       var loadSounds = function(){
         //self.sounds.triki[afinazioa] = {};
@@ -34,6 +34,11 @@
           });
         });
       }
+      $.getJSON("MidiMap.json",function(data){
+        self.MidiMap = data;
+      }).fail(function() {
+        console.log( "JSON MidiMap error" );
+      });
       $.getJSON("Notak.json",function(data){
         self.notakMap = data;
         self.notaMapLoaded = true;
@@ -42,7 +47,7 @@
         callback();
         })
       .fail(function() {
-        console.log( "JSON error" );
+        console.log( "JSON Notak error" );
       });
 
     };

@@ -88,12 +88,32 @@
       colorIreki:'color-ireki',
       colorAfinazioa:'color-afinazioa',
       pianoActive:'piano-active',
-      pianoNone:'piano-none'
+      pianoNone:'piano-none',
+      pianoOn:'piano-active'
 
     }
     var trikiPlayer = new TrikiPlayer();
+    var midiNotes = new MidiNotes();
 
+    var handleMidiIn = function(data){
 
+          var noteName = midiNotes.getNoteName(data.getNote());
+          if(data.isNoteOn()){
+            pianoOn(noteName);
+          } else if(data.isNoteOff()) {
+            pianoOff(noteName);
+          }
+        }
+        JZZ().openMidiIn(/MPK/).or('Cannot open MIDI In port!')
+         .and(function() {
+           //handleMidiIn(this);
+          console.log('MIDI-In: ', this.name());
+
+           })
+         .connect(function(msg) {
+            handleMidiIn(msg);
+            })
+         .wait(10000).close();
 
     var trikiMouseDownEv = function(e){
       var nota = $(e.target);
@@ -135,14 +155,16 @@
 
 
     }
-    var pianoMouseDownEv = function(e){
-      var nota = $(this);
-      var pianoZenbakia = nota.data('key');
-      var pianoNota = nota.data('nota');
+    var pianoOn = function(pianoNota){
+      var nota = $(".piano-nota[data-nota='" + pianoNota + "']");
+      console.log(pianoNota);
       var trikiNotak = trikiPlayer.getZenbakia(pianoNota);
+
       if(trikiNotak.length === 0){
         nota.addClass(classes.pianoNone);
+
       } else {
+
         _.forEach(trikiNotak,function(element,index){
           if(element.Itxi === pianoNota){
             $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").addClass(classes.colorItxi);
@@ -153,17 +175,25 @@
 
 
       }
+      nota.addClass(classes.pianoOn);
       sounds.piano[pianoNota].seek(0);
       sounds.piano[pianoNota].play();
     }
-    var pianoMouseUpEv = function(e){
+    var pianoMouseDownEv = function(e){
       var nota = $(this);
       var pianoZenbakia = nota.data('key');
       var pianoNota = nota.data('nota');
+
+      pianoOn(pianoNota);
+    }
+    var pianoOff = function(pianoNota){
+      var nota = $(".piano-nota[data-nota='" + pianoNota + "']");
       var trikiNotak = trikiPlayer.getZenbakia(pianoNota);
       if(trikiNotak.length === 0){
-        nota.removeClass(classes.pianoNone);
+            nota.removeClass(classes.pianoNone);
+
       } else {
+
         _.forEach(trikiNotak,function(element,index){
           if(element.Itxi === pianoNota){
             $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").removeClass(classes.colorItxi);
@@ -171,9 +201,15 @@
             $(".triki-nota[data-zenbakia='" + element.Zenbakia + "']").removeClass(classes.colorIreki);
           }
         });
-
+        nota.removeClass(classes.pianoOn);
         sounds.piano[pianoNota].stop();
       }
+    }
+    var pianoMouseUpEv = function(e){
+      var nota = $(this);
+      var pianoZenbakia = nota.data('key');
+      var pianoNota = nota.data('nota');
+      pianoOff(pianoNota);
     }
 
      $('.btn-afinazioa').click(function(){
